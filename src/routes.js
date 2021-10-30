@@ -15,19 +15,17 @@ const app = express();
 
 app.get('/tb_adminalunos', function(req, res){  //conexão com a tabela de alunos 
 
-    connection.getConnection(function(err, connection){
+    connection.getConnection(function(err, connection){ 
 
-        connection.query('SELECT * FROM `tb_adminalunos`', function(error, results, fields){
+        connection.query('SELECT * FROM `tb_adminalunos`', function(error, results, fields){ //vai fazer uma consulta na tabela
 
-                if(error) throw error;
-                res.send(results);
+                if(error) throw error; //se tiver erro ele vai avisar
+                res.send(results); // se não tiver, vai retornar a resposta
         });
     });
 });
 
-app.listen(3333, ()=>{
+app.listen(3333, ()=>{ // entrar pela porta 3333
 
-    console.log('Entre em https://localhost:3333/tb_adminalunos');
+    console.log('Entre na porta');
 });
-
-TextDecoderStream
