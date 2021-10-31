@@ -1,3 +1,5 @@
+// import React from 'react';
+// import { Text, TouchableOpacity, View } from 'react-native';
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
@@ -29,3 +31,11 @@ app.listen(3333, ()=>{ // entrar pela porta 3333
 
     console.log('Entre na porta');
 });
+
+// function InApp(){
+
+//     fetch('http://255.255.255.0:3333/tb_adminalunos')
+//     .then(response=>response.json())
+//     .then(users=>console.warn(users));
+
+// }
