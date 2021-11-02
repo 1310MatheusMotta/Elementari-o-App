@@ -29,3 +29,10 @@ app.listen(3333, ()=>{ // entrar pela porta 3333
 
     console.log('Entre na porta');
 });
+
+// function Connect(){
+
+//         fetch('http://192.168.29.102:3333/tb_adminalunos')
+//          .then(results=>results.json())
+//         .then(users=>console.log(users))
+// }
