@@ -1,10 +1,11 @@
 import React from 'react';
-import InApp from './src/pages';
+import Routes from './src/screens_routes';
 
 export default function App() {
 
-  return (
-    
-    <InApp></InApp>
-  );
+      return(
+
+        <Routes></Routes>
+        
+      );
 }
