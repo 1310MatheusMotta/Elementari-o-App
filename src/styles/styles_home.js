@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
     textAutors:{
 
         textAlign:'center',
-        paddingTop: 15
+        paddingTop: 15,
+        paddingBottom: 15
     },
 
     textTitleSec:{
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
         height: 90,
         width: 90,
         borderRadius: 100,
-        marginLeft: 80
+        marginLeft: 170
     },
 });
   
