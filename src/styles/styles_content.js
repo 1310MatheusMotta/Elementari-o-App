@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
       backgroundColor:'#fff',
       marginTop:8,
 
-  },
+  }
 });
   
 export default styles;  

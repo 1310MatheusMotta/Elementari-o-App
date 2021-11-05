@@ -90,8 +90,9 @@ const styles = StyleSheet.create({
 
         height: 90,
         width: 90,
-        borderRadius: 100
-    }
+        borderRadius: 100,
+        marginLeft: 80
+    },
 });
   
 export default styles;  
