@@ -1,7 +1,8 @@
 import React from "react";
-import {View, Text, TouchableOpacity, ImageBackground, Image} from "react-native";
+import {View, Text, TouchableOpacity, ImageBackground, Image, ScrollView} from "react-native";
 import { useNavigation } from "@react-navigation/core";
 import styles from "../../styles/styles_home";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeApp(){
 
@@ -12,39 +13,52 @@ export default function HomeApp(){
     }
 
     return(
+            <ScrollView>
+                        <View>
+                        <ImageBackground source={require('../../images/bg.jpg')} style={styles.imgBg}>
 
-        <View>
-            <ImageBackground source={require('../../images/bg.jpg')} style={styles.imgBg}>
+                            <Image source={require('../../images/atomo.png')} style={styles.atomLogo}></Image>
+                            <Text style={styles.textTitle}>O que é o Elementari-o?</Text>
 
-                <Image source={require('../../images/atomo.png')} style={styles.atomLogo}></Image>
-                <Text style={styles.textTitle}>O que é o Elementari-o?</Text>
+                            <Text style={styles.textDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta nunc eget aliquet vehicula. 
+                                Nam eu nibh a mauris vulputate eleifend. 
+                                Aliquam finibus purus vel erat tincidunt tincidunt. Praesent non tempus nibh. 
+                                Donec sagittis mi eu ultrices ornare. Donec vel eros tortor. Maecenas in magna eget dui varius maximus ac dignissim libero.
+                            </Text>
 
-                <Text style={styles.textDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta nunc eget aliquet vehicula. 
-                      Nam eu nibh a mauris vulputate eleifend. 
-                      Aliquam finibus purus vel erat tincidunt tincidunt. Praesent non tempus nibh. 
-                      Donec sagittis mi eu ultrices ornare. Donec vel eros tortor. Maecenas in magna eget dui varius maximus ac dignissim libero.
-                </Text>
+                        </ImageBackground>
 
-            </ImageBackground>
+                        <View style={styles.viewSec}>
 
-            <View style={styles.viewSec}>
+                            <Text style={styles.textTitleSec}>O que será possível fazer?</Text>
+                            <Text style={styles.textSecDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta nunc eget aliquet vehicula. 
+                                Nam eu nibh a mauris vulputate eleifend. 
+                                Aliquam finibus purus vel erat tincidunt tincidunt. Praesent non tempus nibh:
+                            </Text>
 
-                <Text style={styles.textTitleSec}>O que será possível fazer?</Text>
-                <Text style={styles.textSecDesc}>Aqui o professor poderá pesquisar por alunos cadastrados, que junto à eles virão suas notas
-                      de cada bimestre, ou trimestre!
-                      Para fazer isso, clique no botão abaixo para ver a lista:
-                </Text>
+                            <TouchableOpacity onPress={naviToInApp} style={styles.btnConsult}>
+                                <Text style={styles.textBtn}>Consultar</Text>
+                            </TouchableOpacity>
+                        </View>
 
-                <TouchableOpacity onPress={naviToInApp} style={styles.btnConsult}>
-                    <Text style={styles.textBtn}>Consultar</Text>
-                </TouchableOpacity>
-            </View>
+                        <View>
+                            <Text style={styles.textAutors}>Autores</Text>
 
-            <View>
-                <Text style={styles.textAutors}>Autores</Text>
-            </View>
+                            <Image style={styles.imgAutors} source={require('../../images/tonin.png')}></Image>
+                            <Text>Antonio Sala Barbosa</Text>
 
-        </View>
+                            <Image style={styles.imgAutors} source={require('../../images/danilo.png')}></Image>
+                            <Text>Danilo do Carmo Oliveira</Text>
 
+                            <Image style={styles.imgAutors} source={require('../../images/luis.png')}></Image>
+                            <Text>Luís Filipe dos Santos David</Text>
+
+                            <Image style={styles.imgAutors} source={require('../../images/matheus.png')}></Image>
+                            <Text>Matheus Domingues Motta</Text>
+                            
+                        </View>
+
+                    </View>
+            </ScrollView>
     );
 }

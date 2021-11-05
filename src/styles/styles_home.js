@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         height: "100%",
         backgroundColor: '#f4f4f4',
         alignItems: 'center'
-},
+    },
 
     viewFirst:{
 
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
     textTitle:{
         textAlign:'center',
-        paddingTop: 20,
+        paddingTop: 12,
         color: '#fff'
     },
 
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         textAlign: 'justify',
         width: '60%',
         marginLeft: 80,
-        paddingTop: 15,
+        paddingTop: 12,
         color:'#fff'
     },
 
@@ -35,13 +35,13 @@ const styles = StyleSheet.create({
         textAlign: 'justify',
         width: '60%',
         marginLeft: 80,
-        paddingTop: 20
+        paddingTop: 15
     },
 
     viewSec:{
 
         width:'100%',
-        height: 245,
+        height: 300,
         backgroundColor: '#fff'
     },
 
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ff69b4',
         width: 150,
         marginLeft: 135,
-        marginTop: 30   
+        marginTop: 20   
     },
 
     textBtn:{
@@ -62,19 +62,19 @@ const styles = StyleSheet.create({
     textAutors:{
 
         textAlign:'center',
-        paddingTop: 30
+        paddingTop: 15
     },
 
     textTitleSec:{
 
         textAlign:'center',
-        paddingTop: 15
+        paddingTop: 30
     },
 
     imgBg:{
 
         width: '100%',
-        height: 400
+        height: 350
     },
 
     atomLogo:{
@@ -83,7 +83,14 @@ const styles = StyleSheet.create({
         width:80,
         padding:0,
         marginLeft: 170,
-        marginTop:30
+        marginTop:15
+    },
+    
+    imgAutors:{
+
+        height: 90,
+        width: 90,
+        borderRadius: 100
     }
 });
   
