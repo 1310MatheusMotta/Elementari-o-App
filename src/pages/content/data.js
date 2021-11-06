@@ -20,14 +20,14 @@ export default function InApp(){
       useEffect(()=>{
           ConnectInApp();
 
-      }, [name]);
+      }, []);
 
       ////navegação////
 
       const navigation = useNavigation();
 
       function naviToHome(){
-        navigation.navigate('home');
+        navigation.navigate('Homepage');
       }
 
   return (
@@ -47,8 +47,11 @@ export default function InApp(){
                     <Text>{name.nome_alu}</Text>
                   </View>
                 )}
-              
               />
+
+              <TouchableOpacity onPress={naviToHome}>
+                <Text>Voltar</Text>
+              </TouchableOpacity>
         </View>
   );
 }
