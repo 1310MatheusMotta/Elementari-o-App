@@ -91,8 +91,7 @@ const styles = StyleSheet.create({
 
         height: 90,
         width: 90,
-        borderRadius: 100,
-        marginLeft: 170
+        borderRadius: 100
     },
 });
   
