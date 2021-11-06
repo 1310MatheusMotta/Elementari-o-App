@@ -14,16 +14,18 @@ export default function HomeApp(){
     return(
             <ScrollView>
                         <View>
+                            
                         <ImageBackground source={require('../../images/bg.jpg')} style={styles.imgBg}>
 
                             <Image source={require('../../images/atomo.png')} style={styles.atomLogo}></Image>
-                            <Text style={styles.textTitle}>O que é o Elementari-o?</Text>
 
-                            <Text style={styles.textDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta nunc eget aliquet vehicula. 
-                                Nam eu nibh a mauris vulputate eleifend. 
-                                Aliquam finibus purus vel erat tincidunt tincidunt. Praesent non tempus nibh. 
-                                Donec sagittis mi eu ultrices ornare. Donec vel eros tortor. Maecenas in magna eget dui varius maximus ac dignissim libero.
-                            </Text>
+                                <Text style={styles.textTitle}>O que é o Elementari-o?</Text>
+
+                                    <Text style={styles.textDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta nunc eget aliquet vehicula. 
+                                        Nam eu nibh a mauris vulputate eleifend. 
+                                        Aliquam finibus purus vel erat tincidunt tincidunt. Praesent non tempus nibh. 
+                                        Donec sagittis mi eu ultrices ornare. Donec vel eros tortor. Maecenas in magna eget dui varius maximus ac dignissim libero.
+                                    </Text>
 
                         </ImageBackground>
 

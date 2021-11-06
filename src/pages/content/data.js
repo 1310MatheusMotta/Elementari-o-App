@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../../../styles/styles_content";
-import conn from "../../../services/conn";
+import styles from "../../styles/styles_content";
+import conn from "../../services/conn";
 import { useState, useEffect } from "react";
 import {View, Text, TouchableOpacity, FlatList, ImageBackground} from "react-native";
 import { useNavigation } from "@react-navigation/core";
