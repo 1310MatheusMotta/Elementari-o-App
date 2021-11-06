@@ -2,7 +2,6 @@ import React from "react";
 import {View, Text, TouchableOpacity, ImageBackground, Image, ScrollView} from "react-native";
 import { useNavigation } from "@react-navigation/core";
 import styles from "../../styles/styles_home";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeApp(){
 
