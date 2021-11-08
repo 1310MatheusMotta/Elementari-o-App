@@ -9,7 +9,7 @@ import { useNavigation } from "@react-navigation/core";
 export default function InApp(){
 
     const[name, setName] = useState('');
-    
+
       async function ConnectInApp(){
                 
         // console.log('teste');
@@ -20,8 +20,9 @@ export default function InApp(){
       useEffect(()=>{
           ConnectInApp();
 
-      }, []);
+      }, [name]);
 
+      
       ////navegação////
 
       const navigation = useNavigation();
@@ -33,7 +34,7 @@ export default function InApp(){
   return (
     
     <View style={styles.container}>
-              <TextInput placeholder="Filtrar alunos"></TextInput>
+              <TextInput style={styles.txtInp} placeholder="Filtrar alunos"></TextInput>
               <FlatList
               
                 style={styles.list}

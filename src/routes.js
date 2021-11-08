@@ -25,14 +25,6 @@ app.get('/alunos', function(req, res){  //conexão com a tabela de alunos
     });
 });
 
-app.get('/turmas', function(req, res){
-    connection.getConnection(function(err, connection){
-        connection.query('SELECT * FROM `turmas`', function(error, results){
-            res.send(results);
-        })
-    })
-})
-
 app.listen(3333, ()=>{ // entrar pela porta 3333
 
     console.log('Entre na porta');
