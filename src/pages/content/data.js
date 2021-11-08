@@ -2,14 +2,14 @@ import React from "react";
 import styles from "../../styles/styles_content";
 import conn from "../../services/conn";
 import { useState, useEffect } from "react";
-import {View, Text, TouchableOpacity, FlatList, ImageBackground} from "react-native";
+import {View, Text, TouchableOpacity, FlatList, ImageBackground, TextInput} from "react-native";
 import { useNavigation } from "@react-navigation/core";
 
 
 export default function InApp(){
 
     const[name, setName] = useState('');
-
+    
       async function ConnectInApp(){
                 
         // console.log('teste');
@@ -33,7 +33,7 @@ export default function InApp(){
   return (
     
     <View style={styles.container}>
-              <Text>Filtrar alunos</Text>
+              <TextInput placeholder="Filtrar alunos"></TextInput>
               <FlatList
               
                 style={styles.list}
@@ -44,7 +44,8 @@ export default function InApp(){
                 renderItem={({item:name})=>(
 
                   <View style={styles.itemList}>
-                    <Text>{name.nome_alu}</Text>
+                    <Text>Nome: {name.nome_alu}</Text>
+                    <Text>Número: {name.numero_alu}</Text>
                   </View>
                 )}
               />
