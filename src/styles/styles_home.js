@@ -1,24 +1,13 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    container: {
-        width: "100%",
-        height: "100%",
-        backgroundColor: '#f4f4f4',
-        alignItems: 'center'
-    },
 
-    viewFirst:{
-
-        width:'100%',
-        height: 300,
-        backgroundColor: '#0ff'
-    },
+    //textos e títulos
 
     textTitle:{
         textAlign:'center',
         paddingTop: 12,
-        color: '#fff'
+        color: '#fff',
     },
 
     textDesc:{
@@ -36,22 +25,6 @@ const styles = StyleSheet.create({
         width: '60%',
         marginLeft: 80,
         paddingTop: 15
-    },
-
-    viewSec:{
-
-        width:'100%',
-        height: 300,
-        backgroundColor: '#fff'
-    },
-
-    btnConsult:{
-
-        padding: 15,
-        backgroundColor: '#ff69b4',
-        width: 150,
-        marginLeft: 135,
-        marginTop: 20   
     },
 
     textBtn:{
@@ -72,6 +45,33 @@ const styles = StyleSheet.create({
         paddingTop: 30
     },
 
+
+    //views
+
+    container: {
+        width: "100%",
+        height: "100%",
+        backgroundColor: '#f4f4f4',
+        alignItems: 'center'
+    },
+
+    viewFirst:{
+
+        width:'100%',
+        height: 300,
+        backgroundColor: '#0ff'
+    },
+
+    viewSec:{
+
+        width:'100%',
+        height: 300,
+        backgroundColor: '#fff'
+    },
+
+    
+    //imagens
+
     imgBg:{
 
         width: '100%',
@@ -91,7 +91,19 @@ const styles = StyleSheet.create({
 
         height: 90,
         width: 90,
-        borderRadius: 100
+        borderRadius: 100,
+    },
+
+
+    //botões
+
+    btnConsult:{
+
+        padding: 15,
+        backgroundColor: '#ff69b4',
+        width: 150,
+        marginLeft: 130,
+        marginTop: 20   
     },
 });
   

@@ -21,21 +21,19 @@ export default function HomeApp(){
 
                                 <Text style={styles.textTitle}>O que é o Elementari-o?</Text>
 
-                                    <Text style={styles.textDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta nunc eget aliquet vehicula. 
-                                        Nam eu nibh a mauris vulputate eleifend. 
-                                        Aliquam finibus purus vel erat tincidunt tincidunt. Praesent non tempus nibh. 
-                                        Donec sagittis mi eu ultrices ornare. Donec vel eros tortor. Maecenas in magna eget dui varius maximus ac dignissim libero.
-                                    </Text>
+                                    <Text style={styles.textDesc}>O Elementari-o nada mais é que uma plataforma criada a fim de facilitar o 
+                                    trabalho dos professores, em relação ao controle de alunos, turmas, e, principalmente, suas notas.
+                                    Neste aplicativo desenvolvido por nós, infelizmente as opções de uso não serão as mesmas que a versão Desktop,
+                                    mas garatimos que a facilidade para o uso será a mesma!</Text>
 
                         </ImageBackground>
 
                         <View style={styles.viewSec}>
 
                             <Text style={styles.textTitleSec}>O que será possível fazer?</Text>
-                            <Text style={styles.textSecDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta nunc eget aliquet vehicula. 
-                                Nam eu nibh a mauris vulputate eleifend. 
-                                Aliquam finibus purus vel erat tincidunt tincidunt. Praesent non tempus nibh:
-                            </Text>
+                            <Text style={styles.textSecDesc}>O aplicativo irá disponibilizar o serviço de consulta por lista, ou seja,
+                            o professor poderá consultar seus alunos, acompanhados de suas médias, através de uma barra de pesquisas. Para 
+                            testar esta funcionalidade, cllique no botão abaixo, e começe a procura:</Text>
 
                             <TouchableOpacity onPress={naviToInApp} style={styles.btnConsult}>
                                 <Text style={styles.textBtn}>Consultar</Text>
