@@ -8,20 +8,26 @@ import { useNavigation } from "@react-navigation/core";
 
 export default function InApp(){
 
-    const[name, setName] = useState('');
+   const[classmates, setClassmates] = useState('');
+  //  const[name, setName] = useState('');
 
-      async function ConnectInApp(){
-                
-        // console.log('teste');
-        const response = await conn.get('alunos');
-        setName(response.data);
+  //     async function GetNames(){
+  //       const response = await conn.get('alunos' + name)
+  //       setName(response.data);
+  //     }
+
+  //     useEffect(()=>{
+  //       GetNames();
+  //     }, [])
+
+      async function Classmates(){
+        const response = await conn.get('alunos')
+        setClassmates(response.data)
       }
 
       useEffect(()=>{
-          ConnectInApp();
-
-      }, [name]);
-
+        Classmates();
+      }, [])
       
       ////navegação////
 
@@ -38,15 +44,15 @@ export default function InApp(){
               <FlatList
               
                 style={styles.list}
-                data={name}
-                keyExtractor={name=>(name.id_alu)}
+                data={classmates}
+                keyExtractor={classmates=>(classmates.id_alu)}
                 showsVerticalScrollIndicator={false}
 
-                renderItem={({item:name})=>(
+                renderItem={({item:classmates})=>(
 
                   <View style={styles.itemList}>
-                    <Text>Nome: {name.nome_alu}</Text>
-                    <Text>Número: {name.numero_alu}</Text>
+                    <Text>Nome: {classmates.nome_alu}</Text>
+                    <Text>Número: {classmates.numero_alu}</Text>
                   </View>
                 )}
               />
