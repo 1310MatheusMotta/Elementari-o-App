@@ -15,9 +15,9 @@ export default function HomeApp(){
             <ScrollView>
                         <View>
                             
-                        <ImageBackground source={require('../../images/bg.jpg')} style={styles.imgBg}>
+                        <ImageBackground source={require('../../icons/bg.jpg')} style={styles.imgBg}>
 
-                            <Image source={require('../../images/atomo.png')} style={styles.atomLogo}></Image>
+                            <Image source={require('../../icons/atomo.png')} style={styles.atomLogo}></Image>
 
                                 <Text style={styles.textTitle}>O que é o Elementari-o?</Text>
 
@@ -45,16 +45,16 @@ export default function HomeApp(){
                         <View>
                             <Text style={styles.textAutors}>Autores</Text>
 
-                            <Image style={styles.imgAutors} source={require('../../images/tonin.png')}></Image>
+                            <Image style={styles.imgAutors} source={require('../../icons/tonin.png')}></Image>
                             <Text>Antonio Sala Barbosa</Text>
 
-                            <Image style={styles.imgAutors} source={require('../../images/danilo.png')}></Image>
+                            <Image style={styles.imgAutors} source={require('../../icons/danilo.png')}></Image>
                             <Text>Danilo do Carmo Oliveira</Text>
 
-                            <Image style={styles.imgAutors} source={require('../../images/luis.png')}></Image>
+                            <Image style={styles.imgAutors} source={require('../../icons/luis.png')}></Image>
                             <Text>Luís Filipe dos Santos David</Text>
 
-                            <Image style={styles.imgAutors} source={require('../../images/matheus.png')}></Image>
+                            <Image style={styles.imgAutors} source={require('../../icons/matheus.png')}></Image>
                             <Text>Matheus Domingues Motta</Text>
                             
                         </View>
