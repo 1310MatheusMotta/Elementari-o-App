@@ -51,14 +51,14 @@ export default function InApp(){
                 renderItem={({item:classmates})=>(
 
                   <View style={styles.itemList}>
-                    <Text>Nome: {classmates.nome_alu}</Text>
+                    <Text>Aluno: {classmates.nome_alu}</Text>
                     <Text>Número: {classmates.numero_alu}</Text>
                   </View>
-                  
+
                 )}
               />
 
-              <TouchableOpacity onPress={naviToHome}>
+              <TouchableOpacity onPress={naviToHome} style={styles.btnBack}>
                 <Text>Voltar</Text>
               </TouchableOpacity>
         </View>

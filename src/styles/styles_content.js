@@ -37,6 +37,14 @@ const styles = StyleSheet.create({
         fontSize:20
     },
 
+    btnBack:{
+
+        padding: 10,
+        backgroundColor: '#fff',
+        marginBottom: 8,
+        borderRadius: 10
+    },
+
 
     //flatlist
 
