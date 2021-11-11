@@ -20,13 +20,13 @@ export default function InApp(){
   //       GetNames();
   //     }, [])
 
-      async function Classmates(){
+      async function getClassmates(){
         const response = await conn.get('alunos')
         setClassmates(response.data)
       }
 
       useEffect(()=>{
-        Classmates();
+        getClassmates();
       }, [])
       
       ////navegação////
