@@ -54,6 +54,7 @@ export default function InApp(){
                     <Text>Nome: {classmates.nome_alu}</Text>
                     <Text>Número: {classmates.numero_alu}</Text>
                   </View>
+                  
                 )}
               />
 
