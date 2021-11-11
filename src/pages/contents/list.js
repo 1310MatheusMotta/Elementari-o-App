@@ -9,17 +9,7 @@ import { useNavigation } from "@react-navigation/core";
 export default function InApp(){
 
    const[classmates, setClassmates] = useState('');
-  //  const[name, setName] = useState('');
-
-  //     async function GetNames(){
-  //       const response = await conn.get('alunos' + name)
-  //       setName(response.data);
-  //     }
-
-  //     useEffect(()=>{
-  //       GetNames();
-  //     }, [])
-
+  
       async function getClassmates(){
         const response = await conn.get('alunos')
         setClassmates(response.data)
@@ -40,7 +30,7 @@ export default function InApp(){
   return (
     
     <View style={styles.container}>
-              <TextInput style={styles.txtInp} placeholder="Filtrar alunos"></TextInput>
+              <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos"></TextInput>
               <FlatList
               
                 style={styles.list}
