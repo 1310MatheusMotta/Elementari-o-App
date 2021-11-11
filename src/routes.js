@@ -1,7 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const mysql = require('mysql');
-const { response } = require('express');
 
 const connection = mysql.createPool({  // conexão com o banco 
 
