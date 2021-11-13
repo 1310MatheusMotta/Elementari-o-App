@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
 
         width:'80%',
         backgroundColor:'#fff',
-        marginTop:20,
+        marginLeft: 15,
+        marginTop:30,
         height: 35,
         borderRadius: 10,
         padding: 10
@@ -41,24 +42,35 @@ const styles = StyleSheet.create({
 
         padding: 10,
         backgroundColor: '#fff',
-        marginBottom: 10,
-        borderRadius: 10
+        marginBottom: 20,
+        borderRadius: 10,
+        width: '13%',
+        marginLeft: 170
     },
 
 
     //flatlist
 
     list:{
-        marginTop:32,
+        marginTop:20,
         width:'80%'
     },
 
     itemList:{
         padding:24,
+        marginLeft: 30,
         backgroundColor:'#FFF',
         borderRadius:7,
-        marginBottom:16
+        marginBottom:10
     },
+
+    //imagens
+
+    bgList:{
+
+        width: '115%',
+        height: '101%'
+    }
 });
   
 export default styles;  

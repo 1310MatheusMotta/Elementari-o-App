@@ -30,11 +30,13 @@ export default function InApp(){
 
   return (
     
-    <View style={styles.container}>
-              <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos"></TextInput>
+        <View>
+          <ImageBackground source={require('../../icons/bg.jpg')} style={styles.bgList}>
+
+          <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos"></TextInput>
 
               <FlatList
-              
+
                 style={styles.list}
                 data={classmates}
                 keyExtractor={classmates=>(classmates.id_alu)}
@@ -53,6 +55,7 @@ export default function InApp(){
               <TouchableOpacity onPress={naviToHome} style={styles.btnBack}>
                 <Text>Voltar</Text>
               </TouchableOpacity>
+          </ImageBackground>
         </View>
   );
 }
