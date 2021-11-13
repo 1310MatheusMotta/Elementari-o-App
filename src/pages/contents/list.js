@@ -18,7 +18,8 @@ export default function InApp(){
       useEffect(()=>{
         getClassmates();
       }, [])
-      
+
+
       ////navegação////
 
       const navigation = useNavigation();
@@ -31,6 +32,7 @@ export default function InApp(){
     
     <View style={styles.container}>
               <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos"></TextInput>
+
               <FlatList
               
                 style={styles.list}

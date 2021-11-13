@@ -40,20 +40,20 @@ export default function HomeApp(){
                             </TouchableOpacity>
                         </View>
 
-                        <View>
-                            <Text style={styles.textAutors}>Autores</Text>
+                        <View style={styles.divAutor}>
+                            <Text style={styles.textAutors}>Colaboradores</Text>
 
-                            <Image style={styles.imgAutors} source={require('../../icons/tonin.png')}></Image>
-                            <Text>Antonio Sala Barbosa</Text>
+                            <Image style={styles.imgTonin} source={require('../../icons/tonin.png')}></Image>
+                            <Text style={styles.descTonin}>Antonio Sala</Text>
 
-                            <Image style={styles.imgAutors} source={require('../../icons/danilo.png')}></Image>
-                            <Text>Danilo do Carmo Oliveira</Text>
+                            <Image style={styles.imgDanilo} source={require('../../icons/danilo.png')}></Image>
+                            <Text style={styles.descDanilo}>Danilo Oliveira</Text>
 
-                            <Image style={styles.imgAutors} source={require('../../icons/luis.png')}></Image>
-                            <Text>Luís Filipe dos Santos David</Text>
+                            <Image style={styles.imgLuis} source={require('../../icons/luis.png')}></Image>
+                            <Text style={styles.descLuis}>Luís Filipe dos Santos</Text>
 
-                            <Image style={styles.imgAutors} source={require('../../icons/matheus.png')}></Image>
-                            <Text>Matheus Domingues Motta</Text>
+                            <Image style={styles.imgMatheus} source={require('../../icons/matheus.png')}></Image>
+                            <Text style={styles.descMatheus}>Matheus Motta</Text>
                             
                         </View>
 

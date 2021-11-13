@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     textAutors:{
 
         textAlign:'center',
-        paddingTop: 15,
+        paddingTop: 30,
         paddingBottom: 15
     },
 
@@ -43,6 +43,30 @@ const styles = StyleSheet.create({
 
         textAlign:'center',
         paddingTop: 30
+    },
+
+    descTonin:{
+
+        marginLeft: 75
+    },
+
+    descDanilo:{
+
+        marginLeft: 240
+
+    },
+
+    descLuis:{
+
+        marginLeft: 45,
+
+    },
+
+    descMatheus:{
+
+        marginLeft: 240,
+        paddingBottom: 70
+        
     },
 
 
@@ -69,6 +93,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
 
+    divAutors:{
+
+        paddingBottom: 100
+    },
+
     
     //imagens
 
@@ -87,11 +116,52 @@ const styles = StyleSheet.create({
         marginTop:15
     },
     
-    imgAutors:{
+    imgTonin:{
 
         height: 90,
         width: 90,
         borderRadius: 100,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginLeft: 70,
+        marginTop: 30
+    },
+
+    imgDanilo:{
+
+        height: 90,
+        width: 90,
+        borderRadius: 100,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginLeft: 240,
+        marginTop: -110
+    },
+
+    imgLuis:{
+
+        height: 90,
+        width: 90,
+        borderRadius: 100,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginLeft: 70,
+        marginTop: 50
+    },
+
+    imgMatheus:{
+
+        height: 90,
+        width: 90,
+        borderRadius: 100,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginLeft: 240,
+        marginTop: -110
     },
 
 
