@@ -65,8 +65,14 @@ const styles = StyleSheet.create({
     descMatheus:{
 
         marginLeft: 240,
-        paddingBottom: 70
+        paddingBottom: 50
         
+    },
+
+    descDudu:{
+
+        marginLeft: 141,
+        paddingBottom: 50
     },
 
 
@@ -162,6 +168,15 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginLeft: 240,
         marginTop: -110
+    },
+
+    imgDudu:{
+
+        height: 90,
+        width: 90,
+        borderRadius: 100,
+        marginLeft: 150,
+
     },
 
 

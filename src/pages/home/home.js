@@ -54,6 +54,9 @@ export default function HomeApp(){
 
                             <Image style={styles.imgMatheus} source={require('../../icons/matheus.png')}></Image>
                             <Text style={styles.descMatheus}>Matheus Motta</Text>
+
+                            <Image style ={styles.imgDudu} source={require('../../icons/dudu.jpeg')}></Image>
+                            <Text style={styles.descDudu}>Eduardo Alarcon</Text>
                             
                         </View>
 
