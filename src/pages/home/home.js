@@ -41,7 +41,7 @@ export default function HomeApp(){
                         </View>
 
                         <View style={styles.divAutor}>
-                            <Text style={styles.textAutors}>Colaboradores</Text>
+                            <Text style={styles.textAutors}>Fundadores</Text>
 
                             <Image style={styles.imgTonin} source={require('../../icons/tonin.png')}></Image>
                             <Text style={styles.descTonin}>Antonio Sala</Text>
