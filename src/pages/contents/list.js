@@ -10,12 +10,18 @@ export default function InApp(){
 
    const[classmates, setClassmates] = useState('');
   //  const[otherInfo, setOtherInfo] = useState('');
-  // const[classmatesName, setClassmatesName] = useState('');
+   const[classmatesName, setClassmatesName] = useState('');
   
       async function getClassmates(){
         const response = await conn.get('alunos')
         setClassmates(response.data)
       }
+
+      async function getClassmatesnome(){
+        const response = await conn.get('alunosfiltro' + classmatesName )
+        setClassmates(response.data)
+      }
+      
 
       useEffect(()=>{
         getClassmates();

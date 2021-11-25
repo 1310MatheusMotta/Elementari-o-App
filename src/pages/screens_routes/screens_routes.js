@@ -4,8 +4,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const AppRoutes = createNativeStackNavigator();
 
-import HomeApp from "./pages/home/home";
-import InApp from "./pages/contents/list";
+import HomeApp from "../home/home";
+import InApp from "../contents/list";
 
 export default function Routes(){
 
