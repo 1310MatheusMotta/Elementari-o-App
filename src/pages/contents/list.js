@@ -8,22 +8,24 @@ import { useNavigation } from "@react-navigation/core";
 
 export default function InApp(){
 
-   const[classmates, setClassmates] = useState('');
+   const[classmates, setClassmates] = useState([]);
    const[classmatesName, setClassmatesName] = useState('');
-  
+
+
+      //dados gerais alunos
       async function getClassmates(){
         const response = await conn.get('alunos')
         setClassmates(response.data)
       }
 
       useEffect(()=>{
-        getClassmates();
+        getClassmates()
       }, [])
 
-
+      //filtro nomes
       async function getClassmatesNames(){
-        const response = await conn.get('alunosfiltro' + classmatesName )
-        setClassmates(response.data)
+        const response = await conn.get('alunos/:nome_alu/' + classmatesName )
+        setClassmatesName(response.data)
       }
 
       useEffect(()=>{
@@ -31,7 +33,7 @@ export default function InApp(){
       }, [classmatesName])
       
 
-      ////navegação////
+      //navegação
 
       const navigation = useNavigation();
 
@@ -44,13 +46,13 @@ export default function InApp(){
         <View>
           <ImageBackground source={require('../../icons/bg.jpg')} style={styles.bgList}>
 
-          <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos" onChangeText={(e)=>{setClassmatesName(e)}}></TextInput>
+          <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos" onChangeText={(v)=>{setClassmatesName(v)}}></TextInput>
 
               <FlatList
 
                 style={styles.list}
                 data={classmates}
-                keyExtractor={classmates=>(classmates.id_alu)}
+                keyExtractor={classmates=>String(classmates.id_alu)}
                 showsVerticalScrollIndicator={false}
 
                 renderItem={({item:classmates})=>(

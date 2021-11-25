@@ -1,5 +1,5 @@
 import React from 'react';
-import Routes from './src/screens_routes';
+import Routes from './src/pages/screens_routes/screens_routes';
 
 export default function App() {
 

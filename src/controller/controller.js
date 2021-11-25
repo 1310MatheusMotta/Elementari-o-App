@@ -19,10 +19,10 @@ module.exports={
         };
     },
 
-    async searchName(req, res){
+    async searchNames(req, res){
         try {
-             const { nomeAluno } = req.params;     
-             const result = await knex('alunos').where('nome_alu', 'like', '%' + nomeAluno + '%');
+             const { nome } = req.params;     
+             const result = await knex('alunos').where('nome_alu', 'like', '%' + nome + '%');
 
              return res.json(result);
 

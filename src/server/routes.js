@@ -1,13 +1,13 @@
+
 const express = require('express');
 const controller = require('../controller/controller');
 const routes = express.Router();
 
 routes.get('/', controller.raiz );
 routes.get('/alunos', controller.alunos);
-routes.get('/alunos/:nome_alu', controller.getClassmatesNames);
+routes.get('/alunos/:nome_alu', controller.searchNames);
 
 module.exports = routes;
-
 
 
 
@@ -61,20 +61,3 @@ module.exports = routes;
 
 //     console.log('Servidor on - Porta 3333');
 // });
-
-
-// // const other = express();
-
-// // other.get('/instituicao', function(req, res){
-// //     connection.getConnection( function(err, connection){
-// //         connection.query('SELECT * FROM `instituicao`', function(error, results){
-
-// //             if(error) throw error
-// //             res.send(results)
-// //         })
-// //     })
-// // });
-
-// // other.listen(5656, ()=>{
-// //     console.log('Outra porta')
-// // })
