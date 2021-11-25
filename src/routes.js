@@ -12,12 +12,10 @@ const connection = mysql.createPool({  // conexão com o banco
 const app = express();
 
 app.get('/alunos', function(req, res){ 
-
     connection.getConnection(function(err, connection){ 
-
         connection.query('SELECT * FROM `alunos`', function(error, results){ // consulta na tabela
 
-                // if(error) throw error; 
+                if(error) throw error; 
                 res.send(results); 
         });
     });
@@ -27,3 +25,20 @@ app.listen(3333, ()=>{
 
     console.log('Entre na porta');
 });
+
+
+// const other = express();
+
+// other.get('/instituicao', function(req, res){
+//     connection.getConnection( function(err, connection){
+//         connection.query('SELECT * FROM `instituicao`', function(error, results){
+
+//             if(error) throw error
+//             res.send(results)
+//         })
+//     })
+// });
+
+// other.listen(5656, ()=>{
+//     console.log('Outra porta')
+// })

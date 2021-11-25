@@ -9,6 +9,7 @@ import { useNavigation } from "@react-navigation/core";
 export default function InApp(){
 
    const[classmates, setClassmates] = useState('');
+  //  const[otherInfo, setOtherInfo] = useState('');
   
       async function getClassmates(){
         const response = await conn.get('alunos')
@@ -19,6 +20,14 @@ export default function InApp(){
         getClassmates();
       }, [])
 
+      // async function GetOthers(){
+      //   const response = await conn.get('instituicao')
+      //   setOtherInfo(response.data)
+      // }
+
+      // useEffect(()=>{
+      //   GetOthers()
+      // })
 
       ////navegação////
 
@@ -47,6 +56,7 @@ export default function InApp(){
                   <View style={styles.itemList}>
                     <Text>Aluno: {classmates.nome_alu}</Text>
                     <Text>Número: {classmates.numero_alu}</Text>
+                    <Text>Instituição: </Text>
                   </View>
 
                 )}
