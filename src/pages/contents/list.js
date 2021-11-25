@@ -10,6 +10,7 @@ export default function InApp(){
 
    const[classmates, setClassmates] = useState('');
   //  const[otherInfo, setOtherInfo] = useState('');
+  // const[classmatesName, setClassmatesName] = useState('');
   
       async function getClassmates(){
         const response = await conn.get('alunos')
@@ -27,7 +28,16 @@ export default function InApp(){
 
       // useEffect(()=>{
       //   GetOthers()
-      // })
+      // }, [])
+
+      // async function getNames(){
+      //   const response = await conn.get('alunos' + classmatesName)
+      //   setClassmatesName(response.data)
+      // }
+
+      // useEffect(()=>{
+      //   getNames();
+      // }, [classmatesName])
 
       ////navegação////
 
@@ -42,7 +52,7 @@ export default function InApp(){
         <View>
           <ImageBackground source={require('../../icons/bg.jpg')} style={styles.bgList}>
 
-          <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos"></TextInput>
+          <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos" onChangeText={(e)=>{setClassmatesName(e)}}></TextInput>
 
               <FlatList
 
