@@ -3,8 +3,8 @@ const controller = require('../controller/controller');
 const routes = express.Router();
 
 routes.get('/', controller.raiz );
-routes.get('/alunos', controller.prod);
-routes.get('/alunos/:nome_alu', controller.searchName);
+routes.get('/alunos', controller.alunos);
+routes.get('/alunos/:nome_alu', controller.getClassmatesNames);
 
 module.exports = routes;
 
