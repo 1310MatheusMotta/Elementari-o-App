@@ -5,14 +5,14 @@ module.exports={
     async raiz(req, res){
         const result = await console.log('Servidor requisitado');
 
-        return res.send('It works!');
+        return res.send('Funcionando!');
     },
     
     async alunos(req, res){
         try{
 
             const result = await knex('alunos');
-            return res.json(result);        
+            return res.json(result);      
 
         }catch(error){
             return res.status(400).json({error: error.message});

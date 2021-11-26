@@ -14,7 +14,7 @@ export default function InApp(){
 
       //dados gerais alunos
       async function getClassmates(){
-        const response = await conn.get('alunos')
+        const response = await conn.get('/alunos')
         setClassmates(response.data)
       }
 
@@ -24,7 +24,7 @@ export default function InApp(){
 
       //filtro nomes
       async function getClassmatesNames(){
-        const response = await conn.get('alunos/:nome_alu/' + classmatesName )
+        const response = await conn.get('/alunos/' + classmatesName )
         setClassmatesName(response.data)
       }
 
@@ -46,13 +46,13 @@ export default function InApp(){
         <View>
           <ImageBackground source={require('../../icons/bg.jpg')} style={styles.bgList}>
 
-          <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos" onChangeText={(v)=>{setClassmatesName(v)}}></TextInput>
+          <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos" onChangeText={(value)=>{setClassmatesName(value)}}></TextInput>
 
               <FlatList
 
                 style={styles.list}
                 data={classmates}
-                keyExtractor={classmates=>String(classmates.id_alu)}
+                keyExtractor={classmates=> String(classmates.id_alu)}
                 showsVerticalScrollIndicator={false}
 
                 renderItem={({item:classmates})=>(
