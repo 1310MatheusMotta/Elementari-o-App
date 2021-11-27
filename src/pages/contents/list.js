@@ -30,6 +30,7 @@ export default function InApp(){
     FilterNames()
   }, [nomeAlunos])
 
+
       //navegação
 
       const navigation = useNavigation();
