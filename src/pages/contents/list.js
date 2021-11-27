@@ -8,30 +8,27 @@ import { useNavigation } from "@react-navigation/core";
 
 export default function InApp(){
 
-   const[classmates, setClassmates] = useState([]);
-   const[classmatesName, setClassmatesName] = useState('');
+  const[alunos, setAlunos] = useState([])
+  
+  async function getAll(){
+    const response = await conn.get('alunos')
+    setAlunos(response.data)
+  }
 
+  useEffect(()=>{
+    getAll()
+  }, [])
 
-      //dados gerais alunos
-      async function getClassmates(){
-        const response = await conn.get('/alunos')
-        setClassmates(response.data)
-      }
+  const[nomeAlunos, setNomeAlunos] = useState('')
 
-      useEffect(()=>{
-        getClassmates()
-      }, [])
+  async function FilterNames(){
+    const response = await conn.get('alunos/' + nomeAlunos)
+    setAlunos(response.data)
+  }
 
-      //filtro nomes
-      async function getClassmatesNames(){
-        const response = await conn.get('/alunos/' + classmatesName )
-        setClassmatesName(response.data)
-      }
-
-      useEffect(()=>{
-        getClassmatesNames()
-      }, [classmatesName])
-      
+  useEffect(()=>{
+    FilterNames()
+  }, [nomeAlunos])
 
       //navegação
 
@@ -46,20 +43,20 @@ export default function InApp(){
         <View>
           <ImageBackground source={require('../../icons/bg.jpg')} style={styles.bgList}>
 
-          <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos" onChangeText={(value)=>{setClassmatesName(value)}}></TextInput>
+          <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos" onChangeText={(v)=>setNomeAlunos((v))}></TextInput>
 
               <FlatList
 
                 style={styles.list}
-                data={classmates}
-                keyExtractor={classmates=> String(classmates.id_alu)}
+                data={alunos}
+                keyExtractor={alunos=> String(alunos.id_alu)}
                 showsVerticalScrollIndicator={false}
 
-                renderItem={({item:classmates})=>(
+                renderItem={({item:alunos})=>(
 
                   <View style={styles.itemList}>
-                    <Text>Aluno: {classmates.nome_alu}</Text>
-                    <Text>Número: {classmates.numero_alu}</Text>
+                    <Text>Aluno: {alunos.nome_alu}</Text>
+                    <Text>Número: {alunos.numero_alu}</Text>
                   </View>
 
                 )}
