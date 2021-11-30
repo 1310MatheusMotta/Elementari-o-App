@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     button:{
 
         fontSize:20
+
     },
 
     btnBack:{
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         marginBottom: 20,
         borderRadius: 10,
-        width: '13%',
+        width: '14%',
         marginLeft: 170
     },
 
