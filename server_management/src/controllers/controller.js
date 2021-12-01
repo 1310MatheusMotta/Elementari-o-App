@@ -7,7 +7,6 @@ module.exports = {
         res.send('It Works !!');
 
     },
-    
 
     async alunos(req, res){ //dados gerais alunos
         const results = await knex('alunos');

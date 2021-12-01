@@ -14,7 +14,6 @@ export default function HomeApp(){
     return(
             <ScrollView>
                         <View>
-                            
                         <ImageBackground source={require('../../icons/bg.jpg')} style={styles.imgBg}>
 
                             <Image source={require('../../icons/atomo.png')} style={styles.atomLogo}></Image>

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../styles/styles_content";
 import conn from "../../services/connection";
 import { useState, useEffect } from "react";
-import {View, Text, TouchableOpacity, FlatList, ImageBackground, TextInput, Image} from "react-native";
+import {View, Text, TouchableOpacity, FlatList, ImageBackground, TextInput} from "react-native";
 import { useNavigation } from "@react-navigation/core";
 
 
@@ -17,10 +17,6 @@ export default function InApp(){
 
   useEffect(()=>{
     getAll()
-  }, [])
-
-  useEffect(()=>{
-    getGrades()
   }, [])
 
   const[nomeAlunos, setNomeAlunos] = useState('')
@@ -47,7 +43,7 @@ export default function InApp(){
     
         <View>
           <ImageBackground source={require('../../icons/bg.jpg')} style={styles.bgList}>
-          <Image source={require('../../icons/')}/>
+            
 
           <TextInput style={styles.txtInp} placeholder="Pesquisar por alunos" onChangeText={(v)=>setNomeAlunos((v))}></TextInput>
 

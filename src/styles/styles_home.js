@@ -85,17 +85,10 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
 
-    viewFirst:{
-
-        width:'100%',
-        height: 300,
-        backgroundColor: '#0ff'
-    },
-
     viewSec:{
 
         width:'100%',
-        height: 300,
+        height: 330,
         backgroundColor: '#fff'
     },
 
@@ -110,7 +103,7 @@ const styles = StyleSheet.create({
     imgBg:{
 
         width: '100%',
-        height: 350
+        height: 400
     },
 
     atomLogo:{
@@ -118,7 +111,7 @@ const styles = StyleSheet.create({
         height: 80,
         width:80,
         padding:0,
-        marginLeft: 170,
+        marginLeft: 155,
         marginTop:15
     },
     
@@ -187,7 +180,7 @@ const styles = StyleSheet.create({
         padding: 15,
         backgroundColor: '#ff69b4',
         width: 150,
-        marginLeft: 130,
+        marginLeft: 120,
         marginTop: 20   
     },
 });
